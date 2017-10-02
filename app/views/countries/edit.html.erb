@@ -1,0 +1,19 @@
+<form action="/countries/<%= @id %>" method="POST">
+	<%= token_tag %>
+	
+	<label for="name">Name: </label>
+	<input type="text" name="name" value="<%= @country.name %>">
+	
+	<input type="text" name="population" value="<%= @country.population %>">
+
+	<input type="text" name="flag" value="<%= @country.flag %>">
+
+	<input type="text" name="language" value="<%= @country.language %>">
+
+	<input type="text" name="president" value="<%= @country.president %>">
+
+	<input type="hidden" name="_method" value="PUT">
+
+	<input type="submit" value="Update">
+
+</form>
