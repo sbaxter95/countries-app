@@ -38,6 +38,10 @@ class CountriesController < ApplicationController
     redirect_to '/countries'
   end
 
-
+  def destroy
+  	id = params[:id]
+  	Country.destroy(id)
+  	redirect_to '/countries'
+  end
 
 end

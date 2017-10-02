@@ -1,9 +1,20 @@
 <h1>Countries</h1>
 
+<a href="countries/new">Create a new movie</a>
+
 <% @countries.each do |country| %>
 	<h2><%= country.name %></h2>
 	<h3><%= country.population %></h3>
 	<h3><%= country.flag %></h3>
 	<h3><%= country.language %></h3>
 	<h3><%= country.president %></h3>
+	<a href="countries/<%=country.id%>">View</a>
+	<a href="countries/<%=country.id%>/edit">Edit</a>
+
+	<form action="/countries/<%=country.id%>" method="POST">
+		<%= token_tag %>
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete">
+	</form>
+
 <% end %>
