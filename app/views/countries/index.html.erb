@@ -1,13 +1,13 @@
 <h1>Countries</h1>
 
-<a href="countries/new">Create a new movie</a>
+<a href="countries/new">Create a new country</a>
 
 <% @countries.each do |country| %>
-	<h2><%= country.name %></h2>
-	<h3><%= country.population %></h3>
-	<h3><%= country.flag %></h3>
-	<h3><%= country.language %></h3>
-	<h3><%= country.president %></h3>
+	<h2>Name: <%= country.name %></h2>
+	<h3>Population: <%= country.population %></h3>
+	<img src="<%= country.flag %>">
+	<h3>Language: <%= country.language %></h3>
+	<h3>President: <%= country.president %></h3>
 	<a href="countries/<%=country.id%>">View</a>
 	<a href="countries/<%=country.id%>/edit">Edit</a>
 
