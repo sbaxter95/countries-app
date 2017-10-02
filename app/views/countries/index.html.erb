@@ -1,0 +1,9 @@
+<h1>Countries</h1>
+
+<% @countries.each do |country| %>
+	<h2><%= country.name %></h2>
+	<h3><%= country.population %></h3>
+	<h3><%= country.flag %></h3>
+	<h3><%= country.language %></h3>
+	<h3><%= country.president %></h3>
+<% end %>
